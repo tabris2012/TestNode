@@ -1,0 +1,10 @@
+version: '3'
+services:
+  webserver:
+    build: node # Dockerfileがあるディレクトリ
+    container_name: node
+    tty: true
+    volumes:
+      - ./node/app:/app
+    ports:
+      - "3000:8080"
