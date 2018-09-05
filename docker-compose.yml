@@ -6,5 +6,6 @@ services:
     tty: true
     volumes:
       - ./node/app:/app
+      - /app/jscafe_express/node_modules #バインドフォルダを強制指定 http://jdlm.info/articles/2016/03/06/lessons-building-node-app-docker.html
     ports:
       - "3000:8080"
